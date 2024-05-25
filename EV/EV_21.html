@@ -66,6 +66,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             width: 90%;
@@ -74,6 +75,11 @@
         .audio-player audio {
             width: 100%;
             height: 30px;
+        }
+        .audio-file-name {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: black;
         }
     </style>
 </head>
@@ -88,11 +94,19 @@
             <div class="text"><h2>GALAXY</h2></div>
         </div>
         <div class="audio-player">
-            <audio controls>
-                <source src="/EV/AUDIO/galaxy.mp3" type="audio/mpeg">
+            <div class="audio-file-name">galaxy.mp3</div>
+            <audio id="audio" controls>
+                <source src="AUDIO/galaxy.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('audio');
+            audio.volume = 0.3; // Set the volume to 50% of the original
+        });
+    </script>
 </body>
 </html>
