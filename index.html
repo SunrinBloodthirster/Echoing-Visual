@@ -31,7 +31,9 @@
             position: fixed;
             top: 0;
             z-index: 1000;
-            
+            display: flex; /* Flexbox를 사용하여 아이템 배치 */
+            justify-content: space-between; /* 아이템을 좌우 끝에 배치 */
+            align-items: center; /* 세로 중앙 정렬 */
         }
         .header h1 {
             color: #f0f0f0; /* 헤더 텍스트 색 */
@@ -40,7 +42,7 @@
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 3개의 그리드 아이템을 한 줄에 표시 */
+            grid-template-columns: repeat(2, 1fr); /* 2개의 그리드 아이템을 한 줄에 표시 */
             gap: 20px; /* 그리드 간격 */
             padding: 20px;
             max-width: 1000px; /* 그리드 최대 너비 */
@@ -62,7 +64,7 @@
 
         .info-container {
             position: relative; /* box에 상대적으로 위치하도록 변경 */
-            width: 100%;
+            
             background-color: rgba(18, 18, 18, 0.8); /* 헤더와 동일한 배경색 (반투명) */
             padding: 10px;              
             text-align: center;
@@ -74,55 +76,70 @@
             margin-bottom: 5px; /* 이름과 사진 장수 사이 간격 */
         }
         
-        
-        
+        .icon-button {
+            background: none;
+            border: none;
+            color: #f0f0f0;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+
     </style>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/af7184d4e5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
+        <button class="icon-button" onclick="location.href='EV/EV.html'">
+            <i class="fas fa-headset"></i>
+        </button>
         <h1>見聴</h1> <!-- 텍스트를 "見聴"으로 수정 -->
+        <div></div> <!-- Flexbox 정렬을 위해 빈 div 추가 -->
     </div>
     <div class="grid-container">
         <div class="grid-item">
-            <a href="/Seoul/Seoul.html"><img src="/main/Thumb/thumb (1).jpg" alt="Seoul"></a>
+            <a href="Seoul/Seoul.html"><img src="main/Thumb/thumb (1).jpg" alt="Seoul"></a>
             <div class="info-container">
                 <div class="box-name">Seoul</div>
                 <div class="photo-count">63 Pcs</div>
             </div>
         </div>
         <div class="grid-item">
-            <a href="링크 주소"><img src="/main/Thumb/thumb (2).jpg" alt="Seoul"></a>
+            <a href="Flower/Flower.html"><img src="main/Thumb/thumb (2).jpg" alt="Flower"></a>
             <div class="info-container">
                 <div class="box-name">Flower</div>
-                <div class="photo-count">19 pcs</div>
+                <div class="photo-count">17 pcs</div>
             </div>
         </div>
         <div class="grid-item">
-            <a href="링크 주소"><img src="/main/Thumb/thumb (3).jpg" alt="Seoul"></a>
+            <a href="Water/Water.html"><img src="main/Thumb/thumb (3).jpg" alt="Water"></a>
             <div class="info-container">
                 <div class="box-name">Water</div>
-                <div class="photo-count">28 pcs</div>
+                <div class="photo-count">22 pcs</div>
             </div>
         </div>
         <div class="grid-item">
-            <a href="링크 주소"><img src="/main/Thumb/thumb (4).jpg" alt="Seoul"></a>
+            <a href="Trip/Trip.html"><img src="main/Thumb/thumb (4).jpg" alt="Trip"></a>
             <div class="info-container">
                 <div class="box-name">Trip</div>
-                <div class="photo-count">44 pcs</div>
+                <div class="photo-count">37 pcs</div>
             </div>
         </div>
         <div class="grid-item">
-            <a href="링크 주소"><img src="/main/Thumb/thumb (5).jpg" alt="Seoul"></a>
+            <a href="Summer/Summer.html"><img src="main/Thumb/thumb (5).jpg" alt="Summer"></a>
             <div class="info-container">
                 <div class="box-name">Summer</div>
                 <div class="photo-count">11 pcs</div>
             </div>
         </div>
         <div class="grid-item">
-            <a href="링크 주소"><img src="/main/Thumb/thumb (6).jpg" alt="Seoul"></a>
+            <a href="Night/Night.html"><img src="main/Thumb/thumb (6).jpg" alt="Seoul"></a>
             <div class="info-container">
                 <div class="box-name">Night</div>
-                <div class="photo-count">57 pcs</div>
+                <div class="photo-count">42 pcs</div>
             </div>
         </div>
     </div>
