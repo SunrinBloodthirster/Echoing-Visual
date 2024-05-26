@@ -27,7 +27,7 @@
                 gridItem.classList.add('grid-item');
                 gridItem.setAttribute('data-slide', i); // 데이터 속성 추가
                 gridItem.addEventListener('click', function() {
-                    window.open(`Night_${i}.html`, '_blank');
+                window.location.href = `Night_${i}.html`; // 동일한 탭에서 열기
                 });
                 gridContainer.appendChild(gridItem);
 
