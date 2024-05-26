@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<link rel='stylesheet' href='../styles/sub.css'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>졸업전시회</title>
+    <link rel="stylesheet" href="/styles/sub.css">
 </head>
 <body>
     <div class="header">
@@ -25,9 +25,8 @@
                 gridItem.classList.add('grid-item');
                 gridItem.setAttribute('data-slide', i); // 데이터 속성 추가
                 gridItem.addEventListener('click', function() {
-                window.location.href = `EV_${i}.html`; // 동일한 탭에서 열기
+                    window.open(`EV_${i}.html`, '_blank');
                 });
-
                 gridContainer.appendChild(gridItem);
                 
                 const img = document.createElement('img');
@@ -39,5 +38,3 @@
     </script>
 </body>
 </html> 
-
-
