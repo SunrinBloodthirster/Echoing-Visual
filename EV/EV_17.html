@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>졸업전시회</title>
     <style>
         @font-face {
@@ -10,6 +10,9 @@
             src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
             font-weight: 400;
             font-style: normal;
+        }
+        html, body {
+            overflow-x: hidden;
         }
         body {
             background-color: #1f1f1f;
@@ -73,7 +76,7 @@
             max-width: 500px;
         }
         .audio-player audio {
-            width: 100%;
+            width: 90%;
             height: 30px;
         }
         .audio-file-name {
@@ -89,14 +92,14 @@
     </div>
 
     <div class="picture-container">
-        <img src="Pic/Edit/EV (1).jpg" alt="GALAXY image">
+        <img src="Pic/Edit/EV (17).jpg" alt="GALAXY image">
         <div class="text-container">
-            <div class="text"><h2>GALAXY</h2></div>
+            <div class="text"><h2>GOETHE</h2></div>
         </div>
         <div class="audio-player">
-            <div class="audio-file-name">galaxy.mp3</div>
+            <div class="audio-file-name">GOETHE.mp3</div>
             <audio id="audio" controls>
-                <source src="AUDIO/galaxy.mp3" type="audio/mpeg">
+                <source src="AUDIO/GOETHE.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
@@ -105,8 +108,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const audio = document.getElementById('audio');
-            audio.volume = 0.3; // Set the volume to 50% of the original
+            audio.volume = 0.5; // Set the volume to 50% of the original
         });
     </script>
 </body>
 </html>
+
+
