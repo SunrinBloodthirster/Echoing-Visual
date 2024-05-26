@@ -1,82 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
+<link rel='stylesheet' href='/styles/detail.css'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>슬라이드 페이지</title>
-    <style>
-        body {
-            background-color: #1f1f1f; /* 다크 배경색 */
-            color: #fff; /* 흰색 텍스트 */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column; /* 수직 방향으로 아이템 배치 */
-            align-items: center; /* 가운데 정렬 */
-            justify-content: flex-start; /* 상단으로 정렬 */
-            min-height: 100vh;
-        }
-        .header {
-            background-color: #121212; /* 헤더 배경색 (더 어두운 색) */
-            text-align: center;
-            padding: 10px 0; /* 상하 여백 10px */
-            width: 100%;
-            z-index: 1000;
-        }
-        .header h1 {
-            color: #f0f0f0; /* 헤더 텍스트 색 */
-            font-size: 32px;
-            margin: 0; /* 텍스트와 상단바 간의 여백 제거 */
-        }
-        .slide-container {
-            margin-top: 20px; /* 헤더와의 간격 설정 */
-            width: 100%;
-            max-width: 1000px; /* 최대 너비 설정 */
-            display: flex;
-            justify-content: center; /* 가로 가운데 정렬 */
-            align-items: center; /* 세로 가운데 정렬 */
-            overflow: hidden; /* 넘침 방지 */
-            position: relative; /* 상대 위치 설정 */
-            height: 65vh; /* 화면의 65% 높이 설정 */
-        }
-        .slide-box {
-            background-color: #333; /* 슬라이드 박스 배경색 */
-            padding: 10px; /* 내부 여백 설정 */
-            width: calc(65vh * 3); /* 화면의 65% 너비 설정 */
-            height: 65vh; /* 화면의 65% 높이 설정 */
-            display: flex;
-            transition: transform 0.5s ease; /* 슬라이드 애니메이션 효과 */
-        }
-        .slide-image {
-            max-width: 100%; /* 이미지 너비 최대 100% */
-            max-height: 100%; /* 이미지 높이 최대 100% */
-            object-fit: contain; /* 이미지를 비율 유지하며 박스에 채우기 */
-            object-position: center; /* 이미지를 중앙에 위치시킴 */
-            transform: rotate(90deg); /* 이미지를 오른쪽으로 90도 회전 */
-        }
-        .arrow-box {
-            position: absolute; /* 절대 위치 설정 */
-            bottom: 20px; /* 하단 여백 설정 */
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-        .arrow {
-            background-color: rgba(0, 0, 0, 0.5); /* 반투명한 배경색 */
-            color: #fff; /* 흰색 아이콘 색상 */
-            font-size: 24px; /* 아이콘 크기 */
-            padding: 10px; /* 아이콘 여백 */
-            cursor: pointer; /* 마우스 포인터 모양 변경 */
-            border-radius: 50px; /* 원형 모양으로 변경 */
-            width: 20%;
-            height: 10%;
-            display: flex;
-            justify-content: center;
-        }
-    </style>
+    
 </head>
 <body>
     <div class="header">
@@ -84,9 +13,9 @@
     </div>
     <div class="slide-container" id="slideContainer">
         <div class="slide-box">
-            <img src="/Seoul/Pic/Edit/seoul (1).jpg" class="slide-image" alt="Slide 1">
-            <img src="/Seoul/Pic/Edit/seoul (2).jpg" class="slide-image" alt="Slide 2">
-            <img src="/Seoul/Pic/Edit/seoul (3).jpg" class="slide-image" alt="Slide 3">
+            <img src="/Seoul/Pic/Edit/seoul (1).webp" class="slide-image" alt="Slide 1">
+            <img src="/Seoul/Pic/Edit/seoul (2).webp" class="slide-image" alt="Slide 2">
+            <img src="/Seoul/Pic/Edit/seoul (3).webp" class="slide-image" alt="Slide 3">
         </div>
     </div>
     <div class="arrow-box">
@@ -118,3 +47,4 @@
     </script>
 </body>
 </html>
+

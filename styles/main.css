@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #1f1f1f; /* 다크 배경색 */
+    color: #fff; /* 흰색 텍스트 */
+    font-family: 'Pretendard-Regular', Arial, sans-serif; /* Pretendard-Regular 폰트 적용 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #121212; /* 헤더 배경색 (더 어두운 색) */
+    text-align: center;
+    padding: 20px 0; /* 상하 여백 */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex; /* Flexbox를 사용하여 아이템 배치 */
+    justify-content: center; /* 아이템을 중앙에 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
+}
+
+.header h1 {
+    color: #f0f0f0; /* 헤더 텍스트 색 */
+    font-size: 36px; /* 폰트 크기 증가 */
+    margin: 0; /* 텍스트와 상단바 간의 여백 제거 */
+}
+
+.icon-button-container {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: #f0f0f0;
+    font-size: 28px; /* 아이콘 크기 증가 */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개의 그리드 아이템을 한 줄에 표시 */
+    gap: 20px; /* 그리드 간격 */
+    padding: 20px;
+    max-width: 1000px; /* 그리드 최대 너비 */
+    margin-top: 80px; /* 헤더와의 여백 설정 */
+    width: 100%;
+    box-sizing: border-box; /* 패딩과 보더를 너비에 포함 */
+}
+
+.grid-item {
+    background-color: #333; /* 박스 배경색 */
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* 내부 내용이 넘칠 경우 숨김 */
+    cursor: pointer; /* 클릭 가능한 커서로 설정 */
+    border-radius: 8px; /* 모서리 둥글게 설정 */
+    transition: transform 0.3s, box-shadow 0.3s; /* 애니메이션 추가 */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* 호버 시 확대 효과 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* 호버 시 그림자 강화 */
+}
+
+.grid-item img {
+    width: 100%; /* 이미지를 100%로 표시하여 정사각형 박스에 맞춤 */
+    height: auto; /* 가로 비율에 맞게 세로 비율 조정 */
+    border-radius: 8px; /* 이미지도 둥근 모서리 설정 */
+}
+
+.info-container {
+    position: relative; /* box에 상대적으로 위치하도록 변경 */
+    background-color: rgba(18, 18, 18, 0.8); /* 헤더와 동일한 배경색 (반투명) */
+    padding: 10px;              
+    text-align: center;
+}
+
+.box-name,
+.photo-count {
+    color: #fff; /* 흰색 텍스트 */
+    font-size: 18px; /* 글씨 크기 증가 */
+    margin-bottom: 5px; /* 이름과 사진 장수 사이 간격 */
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px; /* 모바일에서 폰트 크기 조정 */
+    }
+    .grid-container {
+        grid-template-columns: 1fr; /* 모바일에서 한 줄에 하나의 그리드 아이템 표시 */
+        gap: 10px; /* 모바일에서 그리드 간격 축소 */
+        padding: 10px; /* 모바일에서 그리드 내부 여백 축소 */
+    }
+    .box-name,
+    .photo-count {
+        font-size: 16px; /* 모바일에서 글씨 크기 조정 */
+    }
+}

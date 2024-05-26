@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+html, body {
+    overflow-x: hidden;
+}
+body {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Pretendard-Regular';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; /* 가운데 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+}
+.header {
+    background-color: #121212;
+    text-align: center;
+    padding: 20px 0; /* 상하 여백 증가 */
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+.header h1 {
+    color: #f0f0f0;
+    font-size: 36px; /* 폰트 크기 증가 */
+    margin: 0;
+}
+.picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 100px; /* 헤더와의 여백 */
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+img {
+    width: 100%;
+    height: auto; /* 이미지 비율 유지 */
+    max-height: 70vh; /* 최대 높이 설정 */
+    object-fit: contain; /* 이미지가 박스 안에 맞게 조절 */
+    margin-bottom: 20px;
+    border-radius: 10px; /* 이미지 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 이미지 그림자 추가 */
+}
+.text-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.camera {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+h2 {
+    margin: 0;
+    font-size: 24px; /* 글씨 크기 증가 */
+}
+.audio-player {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+.audio-player audio {
+    width: 100%;
+    height: 30px;
+}
+.audio-file-name {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+}
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px; /* 모바일에서 폰트 크기 조정 */
+    }
+    .audio-player {
+        width: 90%;
+    }
+    h2 {
+        font-size: 20px; /* 모바일에서 글씨 크기 조정 */
+    }
+}
