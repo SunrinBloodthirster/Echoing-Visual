@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-family: 'Pretendard-Regular';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center; /* 가운데 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+}
+
+.header {
+    background-color: #121212;
+    padding: 20px 0; /* 상하 여백 증가 */
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+}
+
+.icon-button-container {
+    position: absolute;
+    left: 20px; /* 아이콘을 조금 더 오른쪽으로 이동 */
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    color: #f0f0f0;
+    font-size: 28px; /* 아이콘 크기 증가 */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    color: #f0f0f0; /* 헤더 텍스트 색 */
+    font-size: 36px; /* 폰트 크기 증가 */
+    margin: 0; /* 텍스트와 상단바 간의 여백 제거 */
+}
+
+.picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 100px; /* 헤더와의 여백 */
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    height: auto; /* 이미지 비율 유지 */
+    max-height: 70vh; /* 최대 높이 설정 */
+    object-fit: contain; /* 이미지가 박스 안에 맞게 조절 */
+    margin-bottom: 20px;
+    border-radius: 10px; /* 이미지 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 이미지 그림자 추가 */
+}
+
+/* PC에서만 이미지 크기를 키우기 위한 미디어 쿼리 */
+@media (min-width: 769px) {
+    img {
+        max-height: 80vh; /* PC에서 이미지 최대 높이 증가 */
+    }
+
+    img.landscape {
+        max-height: 90vh; /* 가로 사진일 경우 최대 높이 증가 */
+        width: auto;
+        object-fit: cover; /* 이미지가 박스에 맞게 조절 */
+    }
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.camera {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px; /* 글씨 크기 증가 */
+}
+
+.audio-player {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.audio-player audio {
+    width: 100%;
+    height: 30px;
+}
+
+.audio-file-name {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px; /* 모바일에서 폰트 크기 조정 */
+    }
+    .audio-player {
+        width: 90%;
+    }
+    h2 {
+        font-size: 20px; /* 모바일에서 글씨 크기 조정 */
+    }
+}
+
+/* Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+.modal-content {
+    background-color: #1f1f1f79; /* White with opacity */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative; /* Relative positioning for close button */
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h1 {
+    margin: 0 0 20px 0;
+}
+
+.modal-content h2 {
+    margin: 0 0 20px 0;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px; /* 모바일에서 폰트 크기 조정 */
+    }
+    .audio-player {
+        width: 90%;
+    }
+    h2 {
+        font-size: 20px; /* 모바일에서 글씨 크기 조정 */
+    }
+}

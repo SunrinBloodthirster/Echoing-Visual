@@ -87,3 +87,15 @@ body {
         padding: 10px; /* 모바일에서 그리드 내부 여백 축소 */
     }
 }
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 28px; /* 모바일에서 폰트 크기 조정 */
+    }
+    .audio-player {
+        width: 90%;
+    }
+    h2 {
+        font-size: 20px; /* 모바일에서 글씨 크기 조정 */
+    }
+}

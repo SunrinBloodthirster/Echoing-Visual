@@ -1,14 +1,20 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
-<link rel='stylesheet' href='../styles/detail.css'>
+    <link rel='stylesheet' href='../styles/poem.css'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>졸업전시회</title>
-    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/af7184d4e5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
+        <div class="icon-button-container">
+            <button class="icon-button" id="poemButton">
+                <i class="fas fa-file-alt"></i>
+            </button>
+        </div>
         <h1><a href="EV.html" style="text-decoration: none; color: inherit;">見聴</a></h1>
     </div>
 
@@ -18,11 +24,23 @@
             <div class="text"><h2>Little_Flower</h2></div>
         </div>
         <div class="audio-player">
-            <div class="audio-file-name">Poem_1.mp3</div>
+            <div class="audio-file-name">Little_Flower.mp3</div>
             <audio id="audio" controls>
-                <source src="AUDIO/NAME_PIC" type="audio/mpeg">
+                <source src="AUDIO/Little_Flower.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="poemModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>풀꽃 1</h1>
+            <h2>- 나태주</h2>
+            <p>자세히 보아야<br>예쁘다</p>
+            <p>오래 보아야<br>사랑스럽다</p>
+            <p>너도 그렇다.</p>
         </div>
     </div>
 
@@ -30,11 +48,26 @@
         document.addEventListener('DOMContentLoaded', function() {
             const audio = document.getElementById('audio');
             audio.volume = 0.5; // Set the volume to 50% of the original
+
+            // Modal functionality
+            const modal = document.getElementById("poemModal");
+            const btn = document.getElementById("poemButton");
+            const span = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function() {
+                modal.style.display = "flex";
+            }
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
         });
     </script>
 </body>
 </html>
-
-
-
-
