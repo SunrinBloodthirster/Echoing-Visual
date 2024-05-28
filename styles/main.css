@@ -70,7 +70,6 @@ body {
     background-color: #333; /* 박스 배경색 */
     position: relative;
     text-align: center;
-    overflow: hidden; /* 내부 내용이 넘칠 경우 숨김 */
     cursor: pointer; /* 클릭 가능한 커서로 설정 */
     border-radius: 8px; /* 모서리 둥글게 설정 */
     transition: transform 0.3s, box-shadow 0.3s; /* 애니메이션 추가 */
