@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>졸업전시회</title>
     <link rel="stylesheet" href="../styles/sub.css">
+    <script src="https://kit.fontawesome.com/af7184d4e5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
+        <div class="icon-button-container">
+            <button class="icon-button" onclick="location.href='../index.html'">
+                <i class="fas fa-eye"></i>
+            </button>
+        </div>
         <h1><a href="../index.html" style="text-decoration: none; color: inherit;">見聴</a></h1>
     </div>
     <div class="grid-container" id="gridContainer">
@@ -25,7 +31,7 @@
                 gridItem.classList.add('grid-item');
                 gridItem.setAttribute('data-slide', i); // 데이터 속성 추가
                 gridItem.addEventListener('click', function() {
-                window.location.href = `EV_${i}.html`; // 동일한 탭에서 열기
+                    window.location.href = `EV_${i}.html`; // 동일한 탭에서 열기
                 });
                 gridContainer.appendChild(gridItem);
                 
@@ -37,5 +43,6 @@
         }); //a
     </script>
 </body>
-</html> 
+</html>
+
 
