@@ -74,6 +74,10 @@ body {
     cursor: pointer; /* 클릭 가능한 커서로 설정 */
     border-radius: 8px; /* 모서리 둥글게 설정 */
     transition: transform 0.3s, box-shadow 0.3s; /* 애니메이션 추가 */
+    aspect-ratio: 1; /* 정사각형 유지 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* 아이템들을 아래쪽에 배치 */
 }
 
 .grid-item:hover {
@@ -82,15 +86,18 @@ body {
 }
 
 .grid-item img {
-    width: 100%; /* 이미지를 100%로 표시하여 정사각형 박스에 맞춤 */
-    height: auto; /* 가로 비율에 맞게 세로 비율 조정 */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지를 컨테이너에 맞게 조절 */
     border-radius: 8px; /* 이미지도 둥근 모서리 설정 */
 }
 
 .info-container {
-    position: relative; /* box에 상대적으로 위치하도록 변경 */
+    position: absolute; /* 절대 위치 */
+    bottom: 0; /* 그리드 아이템의 하단에 배치 */
+    width: 100%; /* 너비를 100%로 설정 */
     background-color: rgba(18, 18, 18, 0.8); /* 헤더와 동일한 배경색 (반투명) */
-    padding: 10px;              
+    padding: 10px;
     text-align: center;
 }
 
@@ -98,7 +105,7 @@ body {
 .photo-count {
     color: #fff; /* 흰색 텍스트 */
     font-size: 18px; /* 글씨 크기 증가 */
-    margin-bottom: 5px; /* 이름과 사진 장수 사이 간격 */
+    margin: 5px 0; /* 위아래 간격 */
 }
 
 @media (max-width: 768px) {
