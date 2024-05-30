@@ -32,6 +32,23 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
 }
 
+.right-header {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.letter-link {
+    color: #f0f0f0;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.letter-link:hover {
+    text-decoration: underline;
+}
+
 .sub-header {
     background-color: #1f1f1f; /* 서브헤더 배경색 */
     color: #fff; /* 서브헤더 텍스트 색 */
