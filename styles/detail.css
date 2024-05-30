@@ -127,6 +127,30 @@ h2 {
     color: black;
 }
 
+.home-button {
+    position: fixed;
+    bottom: 20px; /* 하단 여백 */
+    right: 20px; /* 우측 여백 */
+    background-color: #333; /* 버튼 배경색 */
+    color: #fff; /* 버튼 텍스트 색 */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 버튼 그림자 */
+    transition: transform 0.3s, box-shadow 0.3s; /* 애니메이션 추가 */
+}
+
+.home-button:hover {
+    transform: scale(1.1); /* 호버 시 확대 효과 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* 호버 시 그림자 강화 */
+}
+
+
 @media (max-width: 768px) {
     .header h1 {
         font-size: 28px; /* 모바일에서 폰트 크기 조정 */
