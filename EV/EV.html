@@ -11,10 +11,13 @@
     <div class="header">
         <div class="icon-button-container">
             <button class="icon-button" onclick="location.href='../index.html'">
-                <i class="fas fa-eye"></i>
+                <i class="fas fa-headphones"></i>
             </button>
         </div>
         <h1><a href="../index.html" style="text-decoration: none; color: inherit;">見聴</a></h1>
+    </div>
+    <div class="sub-header">
+        <p>사진을 클릭하면 어울리는 오디오가 재생됩니다. 타이틀을 누르면 이전 페이지로 돌아가고, 좌측 상단 아이콘을 누르면 더 많은 사진들을 보실 수 있습니다.</p>
     </div>
     <div class="grid-container" id="gridContainer">
         <!-- 이미지 그리드가 동적으로 생성됩니다. -->
@@ -40,11 +43,7 @@
                 img.alt = `EV ${i}`;
                 gridItem.appendChild(img);
             }
-        }); //a
+        });
     </script>
 </body>
 </html>
-
-
-
-

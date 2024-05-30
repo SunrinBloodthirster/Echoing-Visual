@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>졸업전시회</title>
     <link rel="stylesheet" href="../styles/sub.css">
+    <script src="https://kit.fontawesome.com/af7184d4e5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
         <h1><a href="..//index.html"  style="text-decoration: none; color: inherit;">見聴</a></h1>
     </div>
+    <div class="sub-header">
+        <p>타이틀을 누르면 카테고리 페이지로 돌아갑니다.</p>
+    </div>
     <div class="grid-container" id="gridContainer">
         <!-- 이미지 그리드가 동적으로 생성됩니다. -->
     </div>
+    <button class="home-button" onclick="location.href='../index.html'">
+        <i class="fas fa-home"></i>
+    </button>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const gridContainer = document.getElementById('gridContainer');

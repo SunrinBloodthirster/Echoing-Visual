@@ -32,6 +32,21 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
 }
 
+.sub-header {
+    background-color: #1f1f1f; /* 서브헤더 배경색 */
+    color: #fff; /* 서브헤더 텍스트 색 */
+    text-align: center;
+    padding: 10px 0; /* 상하 여백 10px */
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
+    margin-top: 80px; /* 헤더와의 여백 설정 */
+}
+
+.sub-header p {
+    margin: 0;
+    font-size: 1em; /* 서브헤더 폰트 크기 */
+}
+
 .header h1 {
     color: #f0f0f0; /* 헤더 텍스트 색 */
     font-size: 36px; /* 폰트 크기 증가 */
@@ -61,7 +76,7 @@ body {
     gap: 20px; /* 그리드 간격 */
     padding: 20px;
     max-width: 1000px; /* 그리드 최대 너비 */
-    margin-top: 80px; /* 헤더와의 여백 설정 */
+    margin-top: 20px; /* 서브헤더와의 여백 설정 */
     width: 100%;
     box-sizing: border-box; /* 패딩과 보더를 너비에 포함 */
 }

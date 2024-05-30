@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden; /* 좌우 스크롤 숨기기 */
 }
+
 .header {
     background-color: #121212; /* 헤더 배경색 (더 어두운 색) */
     text-align: center;
@@ -46,13 +47,28 @@ body {
     margin: 0; /* 텍스트와 상단바 간의 여백 제거 */
 }
 
+.sub-header {
+    background-color: #1f1f1f; /* 서브헤더 배경색 */
+    color: #fff; /* 서브헤더 텍스트 색 */
+    text-align: center;
+    padding: 10px 0; /* 상하 여백 10px */
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
+    margin-top: 80px; /* 헤더와의 여백 설정 */
+}
+
+.sub-header p {
+    margin: 0;
+    font-size: 1em; /* 서브헤더 폰트 크기 */
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2개의 그리드 아이템을 한 줄에 표시 */
     gap: 20px; /* 그리드 간격 */
     padding: 20px; /* 그리드 내부 여백 */
     max-width: 1000px; /* 그리드 최대 너비 */
-    margin-top: 80px; /* 헤더와의 여백 설정 */
+    margin-top: 20px; /* 서브헤더와의 여백 설정 */
     width: 100%; /* 그리드 컨테이너 너비 설정 */
     box-sizing: border-box; /* 패딩과 보더를 너비에 포함 */
 }
@@ -78,6 +94,29 @@ body {
     object-fit: cover; /* 이미지가 정사각형 박스에 맞게 잘리도록 설정 */
     object-position: center; /* 이미지를 중앙에 위치시킴 */
     border-radius: 8px; /* 이미지도 둥근 모서리 설정 */
+}
+
+.home-button {
+    position: fixed;
+    bottom: 20px; /* 하단 여백 */
+    right: 20px; /* 우측 여백 */
+    background-color: #333; /* 버튼 배경색 */
+    color: #fff; /* 버튼 텍스트 색 */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 버튼 그림자 */
+    transition: transform 0.3s, box-shadow 0.3s; /* 애니메이션 추가 */
+}
+
+.home-button:hover {
+    transform: scale(1.1); /* 호버 시 확대 효과 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* 호버 시 그림자 강화 */
 }
 
 @media (max-width: 768px) {
